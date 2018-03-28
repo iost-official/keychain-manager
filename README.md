@@ -15,20 +15,20 @@ $ npm install keychain-manager
 ```
 
 ```js
-var PrivateKeychain = require('keychain-manager').PrivateKeychain,
-    PublicKeychain = require('keychain-manager').PublicKeychain
+import {PrivateKeychain} from 'keychain-manager';
+import {PublicKeychain} from 'keychain-manager';
 ```
 
 ### Private Keychain
 
 ```js
-var masterPrivateKeychain = new PrivateKeychain()
+const masterPrivateKeychain = new PrivateKeychain()
 
-var accountNumber = 0,
+const accountNumber = 0,
     accountPrivateKeychain = masterPrivateKeychain.account(accountNumber),
     accountPublicKeychain = accountPrivateKeychain.publicKeychain(),
 
-var childNumber = 2,
+const childNumber = 2,
     childPrivateKeychain = masterPrivateKeychain.child(childNumber)
 ```
 
@@ -37,9 +37,9 @@ A master private keychain is the highest level abstraction of keys. It represent
 Note that knowledge of the master private key of an account keychain derived from the master private keychain does not provide knowledge of the key of the master keychain.
 
 ```js
-var childKeyName = 'blockstack.org'
+const childKeyName = 'blockstack.org'
 
-var chainPathHash = accountPrivateKeychain.secretHash(childKeyName),
+const chainPathHash = accountPrivateKeychain.secretHash(childKeyName),
     privateKey = accountPrivateKeychain.descendant(chainPathHash).privateKey()
 ```
 
@@ -52,7 +52,7 @@ Note that every child private key in a keychain can be traced back to the ancest
 ### Public Keychain
 
 ```js
-var publicKey = publicKeychain.publicKey(),
+const publicKey = publicKeychain.publicKey(),
     address = publicKeychain.address(),
     chainPathHash = 'bd62885ec3f0e3838043115f4ce25eedd22cc86711803fb0c19601eeef185e39',
     descendantPublicKey = publicKeychain.decendant(chainPathHash).publicKey()
