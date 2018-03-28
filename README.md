@@ -37,7 +37,7 @@ A master private keychain is the highest level abstraction of keys. It represent
 Note that knowledge of the master private key of an account keychain derived from the master private keychain does not provide knowledge of the key of the master keychain.
 
 ```js
-const childKeyName = 'blockstack.org'
+const childKeyName = 'child key'
 
 const chainPathHash = accountPrivateKeychain.secretHash(childKeyName),
     privateKey = accountPrivateKeychain.descendant(chainPathHash).privateKey()
