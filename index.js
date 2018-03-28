@@ -1,9 +1,7 @@
-'use strict'
+import bitcore from 'bitcore-lib';
+import utils from './lib/utils';
 
-var bitcore = require('bitcore-lib'),
-    utils = require('./lib/utils')
-
-module.exports = {
+export default {
     PrivateKeychain: require('./lib/private-keychain'),
     PublicKeychain: require('./lib/public-keychain'),
     HDPrivateKey: bitcore.HDPrivateKey,
@@ -12,4 +10,4 @@ module.exports = {
     PublicKey: bitcore.PublicKey,
     Address: bitcore.Address,
     deriveHDKeychain: utils.deriveHDKeychain
-}
+};

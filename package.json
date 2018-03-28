@@ -27,9 +27,7 @@
     "bip32"
   ],
   "author": {
-    "name": "Halfmoon Labs, Inc.",
-    "email": "hello@onename.com",
-    "url": "https://onename.com"
+    "name": "Halfmoon Labs Inc."
   },
   "license": "MIT",
   "homepage": "https://github.com/blockstack/keychain-manager",
