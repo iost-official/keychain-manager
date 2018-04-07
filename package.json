@@ -1,14 +1,14 @@
 {
   "name": "keychain-manager",
   "version": "1.4.1",
-  "description": "A key system based around accounts that each have hierarchical deterministic (HD) keychains with ECDSA public/private keypairs (the ones Bitcoin uses).",
+  "description": "A key system based around accounts that each have hierarchical deterministic (HD) keychains with ECDSA public/private keypairs.",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blockstack/keychain-manager.git"
+    "url": "https://github.com/iost-official/keychain-manager.git"
   },
   "keywords": [
     "key",
@@ -26,11 +26,7 @@
     "keylocker",
     "bip32"
   ],
-  "author": {
-    "name": "Halfmoon Labs Inc."
-  },
   "license": "MIT",
-  "homepage": "https://github.com/blockstack/keychain-manager",
   "dependencies": {
     "bitcore-lib": "^0.13.11",
     "bn.js": "^3.1.1"
